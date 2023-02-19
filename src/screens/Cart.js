@@ -1,4 +1,6 @@
 import { Image, StyleSheet, Dimensions, Text, View } from "react-native";
+import Texto from '../components/Texto';
+
 import topo from "../../assets/topo.png";
 import logo from "../../assets/logo.png"
 
@@ -9,23 +11,23 @@ const Cart = () => {
     return (
         <>
             <Image source={topo} style={styles.topo} />
-            <Text style={styles.titulo}>Detalhe da cesta</Text>
+            <Texto style={styles.titulo}>Detalhe da cesta</Texto>
 
             <View style={styles.cesta}>
-                <Text style={styles.nome}>Cesta de Verduras</Text>
+                <Texto style={styles.nome}>Cesta de Verduras</Texto>
 
                 <View style={styles.fazenda}>
                     <Image source={logo} style={styles.imagemFazenda}/>
-                    <Text style={styles.nomeFazenda}>Jenny jack Farm</Text>
+                    <Texto style={styles.nomeFazenda}>Jenny jack Farm</Texto>
                 </View>
 
-                <Text style={styles.descricao}>
+                <Texto style={styles.descricao}>
                     Uma cesta com produtos selecionados 
                     cuidadozamente da fazenda direto para 
                     sua cozinha.
-                </Text>
+                </Texto>
 
-                <Text style={styles.preco}>R$ 40,00</Text>
+                <Texto style={styles.preco}>R$ 40,00</Texto>
             </View>
         </>
 
@@ -55,8 +57,7 @@ const styles = StyleSheet.create({
         fontSize: 26,
         lineHeight: 42,
         color: '#464646',
-        fontWeight: "normal",
-        fontFamily: "MontserratBold"
+        fontWeight: "bold",
     },
     fazenda: {
         flexDirection: "row",
@@ -71,7 +72,6 @@ const styles = StyleSheet.create({
         fontSize: 16,
         fontHeight: 26,
         marginLeft: 12,
-        fontFamily: "MontserratRegular"
     },
     descricao: {
         color: "#a3a3a3",
