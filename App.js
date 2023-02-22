@@ -4,6 +4,7 @@ import {
   Montserrat_400Regular, 
   Montserrat_700Bold 
 } from '@expo-google-fonts/montserrat';
+import AppLoading from 'expo-app-loading';
 
 import Cart from './src/screens/Cart';
 import mock from './src/mocks/cart';
@@ -16,7 +17,7 @@ export default function App() {
   });
 
   if (!fontLoaded) {
-    return <View />
+    return <AppLoading />
   }
 
   return (
