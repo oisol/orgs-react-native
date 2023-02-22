@@ -8,7 +8,7 @@ const Cart = ({ header, details }) => {
         <>
             < Header {...header}/>
             <View style={styles.cesta}>
-                <Details />
+                <Details {...details}/>
             </View>
         </>
 

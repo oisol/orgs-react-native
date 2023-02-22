@@ -1,24 +1,22 @@
 import { View, Image, StyleSheet } from "react-native";
 
 import Texto from "../../../components/Texto";
-import logo from "../../../../assets/logo.png"
 
-
-const Details = () => {
+const Details = ( { nome, logoFazenda, nomeFazenda, descricao, preco } ) => {
     return (
         <>         
-            <Texto style={styles.nome}></Texto>
+            <Texto style={styles.nome}>{ nome }</Texto>
 
             <View style={styles.fazenda}>
-                <Image source={logo} style={styles.imagemFazenda}/>
-                <Texto style={styles.nomeFazenda}></Texto>
+                <Image source={ logoFazenda } style={styles.imagemFazenda}/>
+                <Texto style={styles.nomeFazenda}>{ nomeFazenda }</Texto>
             </View>
 
             <Texto style={styles.descricao}>
-                
+                { descricao }
             </Texto>
 
-            <Texto style={styles.preco}>R$ </Texto>
+            <Texto style={styles.preco}>R$ { preco }</Texto>
         </>
     )
 };

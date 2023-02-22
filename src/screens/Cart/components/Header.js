@@ -6,7 +6,7 @@ import topo from "../../../../assets/topo.png";
 const width = Dimensions.get('screen').width;
 const height = Dimensions.get('screen').height;
 
-const Header = ({ title }) => {
+const Header = ( { title } ) => {
     return (
         <>
             <Image source={topo} style={styles.topo} />
