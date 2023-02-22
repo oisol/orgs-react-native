@@ -6,11 +6,11 @@ import topo from "../../../../assets/topo.png";
 const width = Dimensions.get('screen').width;
 const height = Dimensions.get('screen').height;
 
-const Header = () => {
+const Header = ({ title }) => {
     return (
         <>
             <Image source={topo} style={styles.topo} />
-            <Texto style={styles.titulo}>Detalhe da cesta</Texto>
+            <Texto style={styles.titulo}> { title } </Texto>
         </>
     )
 };

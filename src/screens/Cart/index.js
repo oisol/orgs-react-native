@@ -3,10 +3,10 @@ import Texto from "../../components/Texto";
 import Details from "./components/Details";
 import Header from "./components/Header";
 
-const Cart = () => {
+const Cart = ({ header, details }) => {
     return (
         <>
-            < Header />
+            < Header {...header}/>
             <View style={styles.cesta}>
                 <Details />
             </View>

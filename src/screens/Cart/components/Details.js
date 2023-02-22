@@ -3,23 +3,22 @@ import { View, Image, StyleSheet } from "react-native";
 import Texto from "../../../components/Texto";
 import logo from "../../../../assets/logo.png"
 
+
 const Details = () => {
     return (
         <>         
-            <Texto style={styles.nome}>Cesta de Verduras</Texto>
+            <Texto style={styles.nome}></Texto>
 
             <View style={styles.fazenda}>
                 <Image source={logo} style={styles.imagemFazenda}/>
-                <Texto style={styles.nomeFazenda}>Jenny jack Farm</Texto>
+                <Texto style={styles.nomeFazenda}></Texto>
             </View>
 
             <Texto style={styles.descricao}>
-                Uma cesta com produtos selecionados 
-                cuidadozamente da fazenda direto para 
-                sua cozinha.
+                
             </Texto>
 
-            <Texto style={styles.preco}>R$ 40,00</Texto>
+            <Texto style={styles.preco}>R$ </Texto>
         </>
     )
 };

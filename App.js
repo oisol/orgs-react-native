@@ -1,10 +1,12 @@
 import { StatusBar, SafeAreaView, View } from 'react-native';
-import Cart from './src/screens/Cart';
 import {
   useFonts,
   Montserrat_400Regular, 
   Montserrat_700Bold 
 } from '@expo-google-fonts/montserrat';
+
+import Cart from './src/screens/Cart';
+import mock from './src/mocks/cart';
 
 export default function App() {
   // Impedir app renderizar sem a fonte
@@ -20,7 +22,7 @@ export default function App() {
   return (
     <SafeAreaView>
       <StatusBar />
-      <Cart />
+      <Cart {...mock}/>
     </SafeAreaView>
   );
 }
