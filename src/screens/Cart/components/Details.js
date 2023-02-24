@@ -1,8 +1,8 @@
-import { View, Image, StyleSheet } from "react-native";
+import { View, Image, StyleSheet, TouchableOpacity } from "react-native";
 
 import Texto from "../../../components/Texto";
 
-const Details = ( { nome, logoFazenda, nomeFazenda, descricao, preco } ) => {
+const Details = ( { nome, logoFazenda, nomeFazenda, descricao, preco, button } ) => {
     return (
         <>         
             <Texto style={styles.nome}>{ nome }</Texto>
@@ -17,6 +17,12 @@ const Details = ( { nome, logoFazenda, nomeFazenda, descricao, preco } ) => {
             </Texto>
 
             <Texto style={styles.preco}>R$ { preco }</Texto>
+
+            <TouchableOpacity style={styles.botao} onPress={() => {}}>
+                <Texto style={styles.textoBotao}>
+                    {button}
+                </Texto>
+            </TouchableOpacity>
         </>
     )
 };
@@ -53,6 +59,19 @@ const styles = StyleSheet.create({
         fontSize: 26,
         fontHeight: 42,
         marginTop: 8,
+    },
+    botao: {
+        marginTop: 16,
+        backgroundColor: "#2A9F85",
+        paddingVertical: 16,
+        borderRadius: 6,
+    },
+    textoBotao: {
+        textAlign: "center",
+        color: "#ffffff",
+        fontSize: 16,
+        fontHeight: 26,
+        fontWeight: "bold",
     },
 });
 
